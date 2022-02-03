@@ -30,9 +30,9 @@
 }
 
 body {
+  background-image: url('..//img/wallpaper.jpg');
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  background-color: #333;
   color: #fff;
   
 }
@@ -55,7 +55,7 @@ ul {
 }
 
 .header {
-  background-color: #343a41;
+  background-color: #131313;
   position: absolute;
   top: 0;
   left: 0;
@@ -73,12 +73,14 @@ ul {
 
 .header__logo img {
   width: 165px;
-  height: 64px;
+  height: 55px;
+  margin-left: 10px;
 }
 
 .header__logo-text {
   font-size: 50px;
   font-weight: 700;
+  margin-left: 150px;
 }
 
 .nav__list {
@@ -94,7 +96,7 @@ ul {
 
 .nav__item--active,
 .nav__item:hover {
-  background-color: rgba(9, 202, 209, 0.3);
+  background-color: rgba(123, 188, 199, 0.336);
 }
 
 .nav__link {
