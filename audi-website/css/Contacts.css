@@ -111,4 +111,61 @@ ul {
     height: 900px;
     position: relative;
   }
-   
+
+  /* OBJECT1 */
+.Avatar1 {
+  position: absolute;
+  width: 166px;
+  height: 165px;
+  left: 559px;
+  top: 129px;
+  background-image: url('../img/Contacts/AvaNazar.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+}
+.uBox {
+  position: absolute;
+  width: 360px;
+  height: 331px;
+  left: 462px;
+  top: 170px;
+  background: #000000;
+}
+.dBox {
+  position: absolute;
+width: 360px;
+height: 100px;
+left: 463px;
+top: 400px;
+background: #292929;
+}
+h1 {
+  position: absolute;
+width: 165px;
+height: 55px;
+left: 559px;
+top: 314px;
+font-family: Prompt;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: #FFFFFF;
+}
+.KN {
+  position: absolute;
+  width: 136px;
+  height: 72px;
+  left: 483px;
+  top: 390px;
+  font-family: Prompt;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
