@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+      url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+      url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+      url('../fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  body {
+    background-image: url('..//img/wallpaper.jpg');
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .wrapper {
+    overflow:hidden;
+    position: relative;
+    width: 1280px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #131313;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 80px;
+    z-index: 99;
+  }
+  
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .header__logo img {
+    width: 165px;
+    height: 55px;
+    margin-left: 10px;
+  }
+  
+  .header__logo-text {
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: 150px;
+  }
+  
+  .nav__list {
+    display: flex;
+    column-gap: 30px;
+  }
+  
+  .nav__item {
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav__item--active,
+  .nav__item:hover {
+    background-color: rgba(123, 188, 199, 0.336);
+  }
+  
+  .nav__link {
+    font-weight: 700;
+  }
+
+  .promo {
+    background: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1280px;
+    height: 640px;
+    position: relative;
+  }
+  .nav_page{
+    position: relative;
+    display: table;
+  }
+  .model, .possition{
+    position: relative;
+  }
+  .model{
+    display: inline-block;
+    position: relative;
+    left: 30px;
+    transform: scale(1,1);
+  }
+  .model:hover{
+    transform: scale(0.9);
+  }
+  .model img{
+    position: relative;
+    width: 300px;
+    height: 140px;
+    top: 90px;
+  }
+  .nameModel{
+    position: relative;
+    left: 50px;
+    top: 70px;
+    text-align: center;
+    font-family: Sansation;
+    font-size: 36px;
+    display: flex;
+    color: #000000;
+  }
+  

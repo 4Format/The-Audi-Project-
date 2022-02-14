@@ -239,6 +239,14 @@ ul {
 .slider__container3 p{
 text-align: left;
 width:100%;
+padding: 10px 15px;
+border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.5);
+transition: background-color 0.3s ease-in-out;
+font-weight: 700;
+color: white;
+text-shadow: 3px 3px 3px black;
+
 }
 .slider__container3 h1{
   text-align: center;
