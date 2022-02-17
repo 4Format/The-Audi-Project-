@@ -206,10 +206,11 @@ ul {
 
 .slider__container h1{
   text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px black;
 }
 .slider__container p{
   text-align: center;
-
 }
 .slider_color{
   text-align: center;
@@ -224,6 +225,8 @@ ul {
 }
 .slider__container2 h1{
   text-align: center;
+  color: white;
+  text-shadow: 3px 3px 3px black;
 }
 .slider__container2 p{
   text-align: center;
@@ -252,6 +255,8 @@ text-shadow: 3px 3px 3px black;
   text-align: center;
   font-size: 50px;
   width: 100%;
+  color: white;
+  text-shadow: 3px 3px 3px black;
 }
 .swiper-button-next,
 .swiper-button-prev {

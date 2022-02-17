@@ -103,44 +103,168 @@
   }
 
   .promo {
-    background: #fff;
+    background-image: url('..//img/Catalog/Fon.jfif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 1280px;
-    height: 640px;
+    height: 900px;
     position: relative;
   }
   .nav_page{
-    position: relative;
-    display: table;
-  }
-  .model, .possition{
-    position: relative;
+    position: absolute;
+    display: inline-block;
   }
   .model{
-    display: inline-block;
+    display:inline-block;
     position: relative;
-    left: 30px;
-    transform: scale(1,1);
-  }
-  .model:hover{
-    transform: scale(0.9);
+    left:300px; top: -470px;
   }
   .model img{
     position: relative;
     width: 300px;
     height: 140px;
-    top: 90px;
+    top: 5px;
   }
   .nameModel{
     position: relative;
-    left: 50px;
     top: 70px;
-    text-align: center;
-    font-family: Sansation;
+    text-align: left;
+    font-family:Sansation_Regular;
     font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+  }
+  .price{
+    position: relative;
+    top: 40px;
+    font-size: 20px;
     display: flex;
     color: #000000;
   }
+  .more{
+    position: relative;
+    top: 0px; left: 100px;
+    background: black;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    transform: scale(1,1);
+  }
+  .more:hover{
+    transform: scale(0.96);
+  }
+.none{
+  display: block;
+}
+
+.promo .content{
+  justify-content: space-between;
+}
+.content{
+  position: relative;
+  top: 150px; left: 50px;
+  color: #000000;
   
+}
+.content .list{
+  display: flex;
+  flex-direction: column;
+}
+.content .list label{
+  height: 35px;
+  font-size: 22px;
+  font-weight: 50;
+  border-bottom: 2px solid black;
+  width: 200px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  margin:5px 0;
+}
+.content .list label:hover{
+  width: 220px;
+  transition:all 0.4s ease-in-out;
+  border-bottom: 2px solid black;
+}
+.content .indicator{
+  position: absolute;
+  width: 220px;
+  height: 45px;
+  top: -5px;
+  left: 0;
+  width: 200px;
+  transition:all 0.4s ease-in-out;
+}
+#home:checked ~ .list .indicator{
+  top: -5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#e-tronGT:checked ~ .list .indicator{
+  top: 40px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#e-tron:checked ~ .list .indicator{
+  top: 85px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#Audi_A:checked ~ .list .indicator{
+  top: 130px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#Audi_Q:checked ~ .list .indicator{
+  top: 175px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#Audi_S:checked ~ .list .indicator{
+  top: 220px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#Audi_RS:checked ~ .list .indicator{
+  top: 265px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#ALL_Cars:checked ~ .list .indicator{
+  top: 310px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.promo input[type="radio"]{
+  display: none;
+}
+.promo .content .car_product{
+  display: flex;
+}
+.promo .car_product .product{
+  display: none;
+}
+.promo .car_product .home{
+  display: block;
+}
+#home:checked ~ .car_product .home,
+#e-tronGT:checked ~ .car_product .e-tronGT,
+#e-tron:checked ~ .car_product .e-tron,
+#Audi_A:checked ~ .car_product .Audi_A,
+#Audi_Q:checked ~ .car_product .Audi_Q,
+#Audi_S:checked ~ .car_product .Audi_S,
+#Audi_RS:checked ~ .car_product .Audi_RS,
+#ALL_Cars:checked ~ .car_product .ALL_Cars{
+  display: block;
+}
+#home:checked ~ .car_product .home,
+#e-tronGT:checked ~ .car_product .home,
+#e-tron:checked ~ .car_product .home,
+#Audi_A:checked ~ .car_product .home,
+#Audi_Q:checked ~ .car_product .home,
+#Audi_S:checked ~ .car_product .home,
+#Audi_RS:checked ~ .car_product .home,
+#ALL_Cars:checked ~ .car_product .home{
+  display: none;
+}
+.colorR{
+  color: red;
+}
