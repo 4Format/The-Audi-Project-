@@ -49,7 +49,7 @@
     overflow:hidden;
     position: relative;
     width: 1280px;
-    height: auto;
+    height: 3100px;
     margin: 0 auto;
   }
   
@@ -108,7 +108,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 1280px;
-    height: 900px;
+    height: 3000px;
     position: relative;
   }
   .nav_page{
@@ -118,7 +118,7 @@
   .model{
     display:inline-block;
     position: relative;
-    left:300px; top: -470px;
+    left:300px; top: -500px;
   }
   .model img{
     position: relative;
@@ -131,7 +131,7 @@
     top: 70px;
     text-align: left;
     font-family:Sansation_Regular;
-    font-size: 36px;
+    font-size: 30px;
     display: flex;
     flex-direction: column;
     color: #000000;
@@ -224,12 +224,16 @@
   top: 220px;
   background: rgba(0, 0, 0, 0.1);
 }
-#Audi_RS:checked ~ .list .indicator{
+#Audi_SQ:checked ~ .list .indicator{
   top: 265px;
   background: rgba(0, 0, 0, 0.1);
 }
-#ALL_Cars:checked ~ .list .indicator{
+#Audi_RS:checked ~ .list .indicator{
   top: 310px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#ALL_Cars:checked ~ .list .indicator{
+  top: 355px;
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -251,6 +255,7 @@
 #Audi_A:checked ~ .car_product .Audi_A,
 #Audi_Q:checked ~ .car_product .Audi_Q,
 #Audi_S:checked ~ .car_product .Audi_S,
+#Audi_SQ:checked ~ .car_product .Audi_SQ,
 #Audi_RS:checked ~ .car_product .Audi_RS,
 #ALL_Cars:checked ~ .car_product .ALL_Cars{
   display: block;
@@ -261,6 +266,7 @@
 #Audi_A:checked ~ .car_product .home,
 #Audi_Q:checked ~ .car_product .home,
 #Audi_S:checked ~ .car_product .home,
+#Audi_SQ:checked ~ .car_product .home,
 #Audi_RS:checked ~ .car_product .home,
 #ALL_Cars:checked ~ .car_product .home{
   display: none;
