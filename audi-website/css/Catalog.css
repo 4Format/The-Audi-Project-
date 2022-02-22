@@ -1,4 +1,10 @@
-* {
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   
@@ -28,14 +34,17 @@
     font-style: normal;
     font-display: swap;
   }
-  
+  html,
   body {
     background-image: url('..//img/wallpaper.jpg');
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    height: 100%;
     color: #fff;
   }
-  
+  body.lock{
+    overflow: hidden;
+  }
   a {
     text-decoration: none;
     color: inherit;
@@ -48,8 +57,7 @@
   .wrapper {
     overflow:hidden;
     position: relative;
-    width: 1280px;
-    height: 3100px;
+    width: 100%;
     margin: 0 auto;
   }
   
@@ -58,7 +66,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 1280px;
+    width: 100%;
     height: 80px;
     z-index: 99;
   }
@@ -107,8 +115,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1280px;
-    height: 3000px;
+    width: 100%;
+    height: 3450px;
     position: relative;
   }
   .nav_page{
@@ -119,6 +127,7 @@
     display:inline-block;
     position: relative;
     left:300px; top: -500px;
+    padding: 50px;
   }
   .model img{
     position: relative;
@@ -128,7 +137,7 @@
   }
   .nameModel{
     position: relative;
-    top: 70px;
+    top: 25px;
     text-align: left;
     font-family:Sansation_Regular;
     font-size: 30px;
@@ -138,25 +147,33 @@
   }
   .price{
     position: relative;
-    top: 40px;
+    top: 25px;
     font-size: 20px;
     display: flex;
     color: #000000;
   }
   .more{
+    display: inline-block;
+    transform: scale(1,1);
+  }
+  .more:hover{
+    transform: scale(0.98);
+  }
+  .order{
     position: relative;
-    top: 0px; left: 100px;
+    top: 0px; left: 80px;
     background: black;
     color: #fff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100px;
+    width: 150px;
     height: 40px;
     transform: scale(1,1);
+    padding: 10px 10px 10px 10px;
   }
-  .more:hover{
+  .order:hover{
     transform: scale(0.96);
   }
 .none{
@@ -276,3 +293,226 @@
 }
 
 /* Catalog2.0 */
+
+
+/* Випадаюче вікно */
+
+
+.popup{
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0; left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 30px 10px;
+  transition: all 0.8s ease 0s;
+}
+.popup__content{
+  background-color: rgb(160, 160, 160);
+  border-radius: 10px;
+  color: #000000;
+  width: 800px;
+  max-width: 800px;
+  padding: 30px; 
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  top: 70px;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.popup__close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+.form{
+  max-width: 550px;
+  margin: 0px auto;
+  color: #000;
+  padding: 30px 0;
+}
+.form *{
+  outline:none;
+}
+.form__body{
+  position: relative;
+}
+.form__body::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(51, 51, 51, 0.1) url(/img/Catalog/ZZ5H.gif) center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+.form__body._sending::after{
+  opacity: 1;
+  visibility: visible;
+}
+.form__item{
+  margin: 0px 0px 20px 0px;
+}
+.form__label{
+  font-size: 18px;
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+.form__title{
+  font-size: 40px;
+  margin: 0px 0px 1em 0px;
+  text-align: center;
+}
+.form__input{
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.5s ease 0s;
+}
+.form__input:focus{
+  box-shadow: 0 0 15px #7a956b;
+}
+.form__input._error{
+  box-shadow: 0 0 15px red;
+}
+textarea.form__input{
+  min-height: 120px;
+  resize: vertical;
+  padding: 20px;
+}
+.options{
+  padding: 10px 0px 0px 0px;
+}
+.options__item{
+  margin: 0px 0px 10px 0px;
+}
+.options__input{
+  display: none;
+} 
+.options__input:checked + .options__label::after{
+  transform: scale(1);
+}
+ .options__label{
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 140%;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.options__label::before{
+  content: " ";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0px 10px 0px 0px;
+}
+.options__label::after{
+  transition: transform 0.3s ease 0s;
+  content: "";
+  position: absolute;
+  top: 500px;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #7a956b;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.checkbox{}
+.checkbox._error .checkbox__label::before{
+  box-shadow: 0 0 15px red;
+}
+.checkbox__input{
+  display: none;
+}
+.checkbox__input:checked + .checkbox__label::after{
+  transform: scale(1);
+}
+.checkbox__label{
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.checkbox__label::before{
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0px 10px 0px 0px;
+}
+.checkbox__label::after{
+  transition: transform 0.5s ease 0s;
+  content: "";
+  width: 16px;
+  position: absolute;
+  height: 16px;
+  top: 4px;
+  left: 4px;
+  background-color: #7a956b;
+  border-radius: 4px;
+  transform: scale(0);
+}
+.form__button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  background-color: #7a956b;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 5px 0 #161b13;
+  transition: background-color 0.5s ease 0s;
+  position: relative;
+  top:0;
+}
+.form__button:hover{
+  background-color: #4f6146;
+}
+.form__button:active{
+  top: 3px;
+  box-shadow: 0 2px 0 #161b13;
+}

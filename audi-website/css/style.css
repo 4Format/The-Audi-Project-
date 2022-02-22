@@ -130,6 +130,8 @@ ul {
 
 .title {
   font-size: 65px;
+  color: white;
+  text-shadow: 3px 3px 3px black;
 }
 .title2{
   font-size: 35px;
